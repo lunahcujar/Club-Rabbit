@@ -1,9 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
+
+    <!-- IMPORTANTE PARA CELULARES -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rabbit Volley Club</title>
 
     <!-- =========================
          ESTILOS BASE
@@ -29,17 +34,236 @@
             }
         }
 
+        /* Ocultar scrollbar */
         ::-webkit-scrollbar {
             display: none;
         }
+
+        /* Evitar desplazamiento horizontal */
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1023px) {
+
+            header > div:first-child {
+                height: 70px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            main {
+                padding-top: 70px;
+            }
+
+            main > div {
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+        }
+
+        /* =========================
+           MÓVILES
+        ========================== */
+
+        @media (max-width: 767px) {
+
+            /* HEADER */
+
+            header > div:first-child {
+                height: 64px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            header img {
+                width: 38px;
+                height: 38px;
+            }
+
+            header .logo-name {
+                font-size: 17px;
+                margin-left: 0;
+            }
+
+            /* Ocultar navegación de escritorio */
+            header nav.desktop-nav {
+                display: none;
+            }
+
+            /* MAIN */
+
+            main {
+                padding-top: 64px;
+            }
+
+            main > div {
+                padding: 32px 16px;
+                gap: 32px;
+            }
+
+            /* HISTORIA */
+
+            .history-section {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .history-title {
+                font-size: 34px !important;
+                line-height: 40px !important;
+            }
+
+            .history-number {
+                font-size: 80px !important;
+                top: -25px !important;
+                left: -5px !important;
+            }
+
+            .history-text {
+                font-size: 16px !important;
+                line-height: 25px !important;
+            }
+
+            /* FOTO EQUIPO */
+
+            .team-image {
+                min-height: 380px !important;
+                height: 380px !important;
+                width: 100%;
+            }
+
+            .team-image-text {
+                padding: 20px !important;
+            }
+
+            .team-image-title {
+                font-size: 25px !important;
+                line-height: 32px !important;
+            }
+
+            /* INFORMACIÓN */
+
+            .institution-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .institution-left,
+            .institution-right {
+                width: 100%;
+            }
+
+            .institution-title {
+                font-size: 30px !important;
+                line-height: 37px !important;
+            }
+
+            /* SEDE */
+
+            .location-header {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .location-practice {
+                text-align: left !important;
+            }
+
+            .location-map {
+                min-height: 250px !important;
+                height: 250px !important;
+            }
+
+            /* FOOTER */
+
+            footer {
+                padding-top: 32px;
+                padding-bottom: 24px;
+            }
+
+            footer > div {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+        /* =========================
+           CELULARES PEQUEÑOS
+        ========================== */
+
+        @media (max-width: 480px) {
+
+            header > div:first-child {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            header img {
+                width: 36px;
+                height: 36px;
+            }
+
+            header .logo-name {
+                font-size: 16px;
+            }
+
+            main > div {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .history-title {
+                font-size: 30px !important;
+                line-height: 36px !important;
+            }
+
+            .history-number {
+                font-size: 70px !important;
+            }
+
+            .team-image {
+                min-height: 320px !important;
+                height: 320px !important;
+            }
+
+            .team-image-title {
+                font-size: 22px !important;
+                line-height: 28px !important;
+            }
+
+            .institution-title {
+                font-size: 27px !important;
+                line-height: 34px !important;
+            }
+
+            .email-text {
+                font-size: 14px !important;
+                word-break: break-word;
+            }
+        }
     </style>
+
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+
     <!-- =========================
          CONFIGURACIÓN DE TAILWIND
     ========================== -->
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -190,7 +414,9 @@
         };
     </script>
 
+
     <!-- Google Fonts -->
+
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet"
@@ -200,6 +426,7 @@
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&family=Montserrat:wght@100..900&display=swap"
         rel="stylesheet"
     >
+
 </head>
 
 
@@ -207,29 +434,31 @@
 
 
 <!-- =====================================================
-     HEADER / MENÚ PRINCIPAL
+     HEADER
 ====================================================== -->
 
 <header
     class="fixed top-0 w-full z-50 bg-surface-container/90 backdrop-blur-md border-b border-outline-variant/20 shadow-xl"
 >
 
+    <!-- HEADER PRINCIPAL -->
+
     <div
         class="h-20 max-w-[1280px] mx-auto px-margin-desktop flex items-center justify-between"
     >
 
-        <!-- LOGO Y NOMBRE -->
-        <div class="flex items-center gap-sm">
+        <!-- LOGO -->
 
-            <!-- CAMBIAR LOGO AQUÍ -->
+        <div class="flex items-center gap-sm min-w-0">
+
             <img
                 src="logo.jpeg"
                 alt="Logo Rabbit Volley"
-                class="w-10 h-10 rounded-full object-cover ring-2 ring-secondary"
+                class="w-10 h-10 rounded-full object-cover ring-2 ring-secondary flex-shrink-0"
             >
 
             <span
-                class="font-headline-md text-headline-md tracking-wider text-secondary uppercase ml-2"
+                class="logo-name font-headline-md text-headline-md tracking-wider text-secondary uppercase ml-2 whitespace-nowrap"
             >
                 Rabbit Volley
             </span>
@@ -237,9 +466,10 @@
         </div>
 
 
-        <!-- MENÚ -->
+        <!-- MENÚ ESCRITORIO -->
+
         <nav
-            class="hidden lg:flex items-center gap-lg"
+            class="desktop-nav hidden lg:flex items-center gap-lg"
         >
 
             <a
@@ -288,18 +518,96 @@
         </nav>
 
 
-        <!-- ICONOS DERECHA -->
+        <!-- DERECHA -->
+
         <div class="flex items-center gap-md">
 
+            <!-- BUSCAR -->
+
             <span
-                class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-colors"
+                class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-colors hidden sm:block"
             >
                 search
             </span>
 
 
+            <!-- BOTÓN MENÚ MÓVIL -->
+
+            <button
+                id="mobile-menu-button"
+                class="lg:hidden text-secondary flex items-center justify-center"
+                aria-label="Abrir menú"
+                type="button"
+            >
+
+                <span
+                    id="menu-icon"
+                    class="material-symbols-outlined text-3xl"
+                >
+                    menu
+                </span>
+
+            </button>
 
         </div>
+
+    </div>
+
+
+    <!-- =================================================
+         MENÚ MÓVIL
+    ================================================== -->
+
+    <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-surface-container border-t border-outline-variant/20 px-5 py-5 shadow-xl"
+    >
+
+        <nav class="flex flex-col gap-5">
+
+            <a
+                href="#"
+                class="text-on-surface-variant uppercase font-bold hover:text-secondary transition-colors"
+            >
+                Inicio
+            </a>
+
+            <a
+                href="#"
+                class="text-secondary uppercase font-bold"
+            >
+                Nosotros
+            </a>
+
+            <a
+                href="#"
+                class="text-on-surface-variant uppercase font-bold hover:text-secondary transition-colors"
+            >
+                Programas
+            </a>
+
+            <a
+                href="#"
+                class="text-on-surface-variant uppercase font-bold hover:text-secondary transition-colors"
+            >
+                Eventos
+            </a>
+
+            <a
+                href="#"
+                class="text-on-surface-variant uppercase font-bold hover:text-secondary transition-colors"
+            >
+                Galería
+            </a>
+
+            <a
+                href="#"
+                class="text-on-surface-variant uppercase font-bold hover:text-secondary transition-colors"
+            >
+                Contacto
+            </a>
+
+        </nav>
 
     </div>
 
@@ -321,27 +629,32 @@
 
 
         <!-- =================================================
-             SECCIÓN NUESTRA HISTORIA
+             NUESTRA HISTORIA
         ================================================== -->
 
-        <div class="grid grid-cols-12 gap-gutter items-center">
+        <div
+            class="history-section grid grid-cols-12 gap-gutter items-center"
+        >
 
 
             <!-- COLUMNA IZQUIERDA -->
-            <div class="col-span-5 flex flex-col gap-lg">
 
+            <div
+                class="col-span-12 lg:col-span-5 flex flex-col gap-lg"
+            >
 
                 <!-- TÍTULO -->
+
                 <div class="relative">
 
                     <span
-                        class="absolute -top-10 -left-10 text-9xl font-display-lg text-secondary opacity-10 select-none z-0"
+                        class="history-number absolute -top-10 -left-10 text-9xl font-display-lg text-secondary opacity-10 select-none z-0"
                     >
                         01
                     </span>
 
                     <h1
-                        class="font-display-lg text-display-lg text-on-surface z-10 relative mb-sm uppercase tracking-tighter"
+                        class="history-title font-display-lg text-display-lg text-on-surface z-10 relative mb-sm uppercase tracking-tighter"
                     >
                         Nuestra
                         <br>
@@ -349,6 +662,7 @@
                         <span class="text-secondary">
                             Historia
                         </span>
+
                     </h1>
 
                     <div
@@ -359,10 +673,11 @@
 
 
                 <!-- TEXTOS -->
+
                 <div class="flex flex-col gap-md">
 
                     <p
-                        class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                        class="history-text font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
                     >
                         Somos una asociación deportiva sin ánimo de lucro dedicada
                         a promover el voleibol piso y playa, el trabajo en equipo,
@@ -370,7 +685,7 @@
                     </p>
 
                     <p
-                        class="font-body-md text-body-md text-on-surface-variant/80"
+                        class="history-text font-body-md text-body-md text-on-surface-variant/80"
                     >
                         Fundados bajo la premisa de que el deporte transforma vidas,
                         Club Rabbit se ha consolidado como un espacio de formación
@@ -383,6 +698,7 @@
 
 
                 <!-- ATLETAS -->
+
                 <div class="mt-md flex items-center gap-md">
 
                     <div class="flex -space-x-4">
@@ -431,32 +747,28 @@
 
 
             <!-- =================================================
-                 IMAGEN GRANDE DEL EQUIPO
+                 FOTO DEL EQUIPO
             ================================================== -->
 
             <div
-                class="col-span-7 relative h-full min-h-[600px] rounded-xl overflow-hidden shadow-xl shadow-surface-container-lowest/50 group"
+                class="team-image col-span-12 lg:col-span-7 relative h-[380px] lg:h-full min-h-[380px] lg:min-h-[600px] rounded-xl overflow-hidden shadow-xl shadow-surface-container-lowest/50 group"
             >
 
                 <!-- DEGRADADO -->
+
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent z-10 opacity-60"
                 ></div>
 
 
                 <!-- CAPA DORADA -->
+
                 <div
                     class="absolute inset-0 bg-secondary/10 mix-blend-overlay z-10"
                 ></div>
 
 
-                <!-- =================================================
-                     FOTO DEL EQUIPO
-
-                     IMPORTANTE:
-                     equipo.jpeg debe estar en la misma carpeta
-                     que code.html
-                ================================================== -->
+                <!-- FOTO -->
 
                 <div
                     class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105"
@@ -465,9 +777,10 @@
                 ></div>
 
 
-                <!-- TEXTO SOBRE LA FOTO -->
+                <!-- TEXTO SOBRE FOTO -->
+
                 <div
-                    class="absolute bottom-0 left-0 p-lg z-20 w-full bg-gradient-to-t from-surface-container-lowest to-transparent"
+                    class="team-image-text absolute bottom-0 left-0 p-lg z-20 w-full bg-gradient-to-t from-surface-container-lowest to-transparent"
                 >
 
                     <div class="flex items-center gap-sm mb-xs">
@@ -486,7 +799,7 @@
 
 
                     <h3
-                        class="font-headline-lg text-headline-lg text-on-surface uppercase"
+                        class="team-image-title font-headline-lg text-headline-lg text-on-surface uppercase"
                     >
                         Un solo equipo.
                         <br>
@@ -527,13 +840,14 @@
                 </span>
 
                 <h2
-                    class="font-display-lg text-display-lg text-on-surface uppercase tracking-tighter"
+                    class="institution-title font-display-lg text-display-lg text-on-surface uppercase tracking-tighter"
                 >
                     Información
 
                     <span class="text-secondary opacity-50">
                         Institucional
                     </span>
+
                 </h2>
 
             </div>
@@ -542,14 +856,18 @@
 
             <!-- CONTENEDOR -->
 
-            <div class="grid grid-cols-12 gap-gutter">
+            <div
+                class="institution-grid grid grid-cols-12 gap-gutter"
+            >
 
 
                 <!-- =============================================
                      COLUMNA IZQUIERDA
                 ============================================== -->
 
-                <div class="col-span-4 flex flex-col gap-gutter">
+                <div
+                    class="institution-left col-span-12 lg:col-span-4 flex flex-col gap-gutter"
+                >
 
 
                     <!-- REPRESENTANTE LEGAL -->
@@ -565,12 +883,14 @@
                         <div
                             class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary mb-md"
                         >
+
                             <span
                                 class="material-symbols-outlined"
                                 style="font-variation-settings: 'FILL' 1;"
                             >
                                 gavel
                             </span>
+
                         </div>
 
                         <h4
@@ -580,7 +900,7 @@
                         </h4>
 
                         <p
-                            class="font-headline-md text-headline-md text-on-surface"
+                            class="font-headline-md text-headline-md text-on-surface break-words"
                         >
                             Augusto Cújar Bermúdez
                         </p>
@@ -602,12 +922,14 @@
                         <div
                             class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary mb-md"
                         >
+
                             <span
                                 class="material-symbols-outlined"
                                 style="font-variation-settings: 'FILL' 1;"
                             >
                                 call
                             </span>
+
                         </div>
 
                         <h4
@@ -619,13 +941,13 @@
                         <div class="flex flex-col gap-xs">
 
                             <p
-                                class="font-headline-md text-headline-md text-on-surface flex items-center gap-sm"
+                                class="font-headline-md text-headline-md text-on-surface"
                             >
                                 313 2884 314
                             </p>
 
                             <p
-                                class="font-headline-md text-headline-md text-on-surface flex items-center gap-sm"
+                                class="font-headline-md text-headline-md text-on-surface"
                             >
                                 311 850 6354
                             </p>
@@ -649,12 +971,14 @@
                         <div
                             class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary mb-md"
                         >
+
                             <span
                                 class="material-symbols-outlined"
                                 style="font-variation-settings: 'FILL' 1;"
                             >
                                 mail
                             </span>
+
                         </div>
 
                         <h4
@@ -664,7 +988,7 @@
                         </h4>
 
                         <p
-                            class="font-body-lg text-body-lg text-on-surface break-all"
+                            class="email-text font-body-lg text-body-lg text-on-surface break-all"
                         >
                             rabbitclub30@gmail.com
                         </p>
@@ -679,7 +1003,9 @@
                      COLUMNA DERECHA
                 ============================================== -->
 
-                <div class="col-span-8 flex flex-col gap-gutter">
+                <div
+                    class="institution-right col-span-12 lg:col-span-8 flex flex-col gap-gutter"
+                >
 
 
                     <!-- SEDE -->
@@ -693,9 +1019,12 @@
                         ></div>
 
 
+                        <!-- INFORMACIÓN DE SEDE -->
+
                         <div
-                            class="flex items-start justify-between mb-md"
+                            class="location-header flex flex-col sm:flex-row items-start justify-between gap-6 mb-md"
                         >
+
 
                             <!-- SEDE PRINCIPAL -->
 
@@ -721,7 +1050,7 @@
                                 </h4>
 
                                 <p
-                                    class="font-headline-md text-headline-md text-on-surface"
+                                    class="font-headline-md text-headline-md text-on-surface break-words"
                                 >
                                     Calle 131 A No.55 - 25
                                 </p>
@@ -738,7 +1067,9 @@
 
                             <!-- LUGAR DE PRÁCTICA -->
 
-                            <div class="text-right">
+                            <div
+                                class="location-practice text-left sm:text-right"
+                            >
 
                                 <h4
                                     class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider mb-xs text-[11px]"
@@ -764,14 +1095,14 @@
 
 
 
-                        <!-- MAPA / IMAGEN DE UBICACIÓN -->
+                        <!-- MAPA / IMAGEN -->
 
                         <div
                             class="flex-grow w-full rounded-lg overflow-hidden relative shadow-inner"
                         >
 
                             <div
-                                class="w-full h-full min-h-[300px] bg-cover bg-center mix-blend-luminosity opacity-80"
+                                class="location-map w-full h-[250px] md:h-[300px] lg:h-full min-h-[250px] lg:min-h-[300px] bg-cover bg-center mix-blend-luminosity opacity-80"
                                 data-location="Carrera 53 C No.131 A - 49, Prado Norte, Bogota"
                                 style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPq5k7cT5PrKTSbEm7blCx47KbTdXMp3wXniL2BQfqF84AmRCnjH0m5DGHPQ6VEoHJXSD2N32sxucezhWktCcBz4ILh2-uz_htIY_NGt1K8kv3zU7nfqBtEeXafz7UECfANhCBSuM4ILj7P2Zs9W3a6i0hc-IGTDp3outS5OGTVRqdcx0ruG1TNnS3AockewpU9ojNigtqwj_DOJ8Kr4G-V5RhseEv7YpvUzM-9yPA73yIeRUfGUcqvA')"
                             ></div>
@@ -844,28 +1175,39 @@
                 <a
                     class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all"
                     href="#"
+                    aria-label="Compartir"
                 >
+
                     <span class="material-symbols-outlined">
                         share
                     </span>
+
                 </a>
+
 
                 <a
                     class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all"
                     href="#"
+                    aria-label="Sitio web"
                 >
+
                     <span class="material-symbols-outlined">
                         public
                     </span>
+
                 </a>
+
 
                 <a
                     class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all"
                     href="#"
+                    aria-label="Videos"
                 >
+
                     <span class="material-symbols-outlined">
                         play_circle
                     </span>
+
                 </a>
 
             </div>
@@ -887,5 +1229,53 @@
 </footer>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT MENÚ MÓVIL
+====================================================== -->
+
+<script>
+
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuButton.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("hidden");
+
+        if (mobileMenu.classList.contains("hidden")) {
+
+            menuIcon.textContent = "menu";
+
+        } else {
+
+            menuIcon.textContent = "close";
+
+        }
+
+    });
+
+
+    /* Cerrar menú cuando se selecciona una opción */
+
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+
+    mobileLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileMenu.classList.add("hidden");
+
+            menuIcon.textContent = "menu";
+
+        });
+
+    });
+
+</script>
+
+
 </body>
 </html>
+```
