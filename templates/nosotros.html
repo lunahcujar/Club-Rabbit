@@ -1,0 +1,583 @@
+{% extends "base.html" %}
+
+{% block title %}Nosotros | Rabbit Volley Club{% endblock %}
+
+{% block content %}
+
+<main class="bg-background min-h-screen">
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="relative min-h-[520px] lg:min-h-[620px] flex items-end overflow-hidden">
+
+        <!-- Imagen -->
+        <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('/static/images/equipo.jpeg');"
+        ></div>
+
+        <!-- Oscurecimiento -->
+        <div class="absolute inset-0 bg-black/65"></div>
+
+        <!-- Degradado -->
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+
+        <!-- Línea decorativa -->
+        <div class="absolute left-0 bottom-0 w-full h-1 bg-secondary"></div>
+
+        <div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 lg:px-10 pb-14 lg:pb-20">
+
+            <div class="max-w-3xl">
+
+                <span class="text-secondary uppercase tracking-[0.3em] text-xs font-bold">
+                    Club Deportivo Rabbit
+                </span>
+
+                <h1 class="mt-4 text-5xl md:text-6xl lg:text-8xl font-display font-black text-on-surface uppercase tracking-tight leading-[0.9]">
+                    Somos
+                    <span class="text-secondary">Rabbit</span>
+                </h1>
+
+                <p class="mt-6 max-w-2xl text-base md:text-lg text-on-surface-variant leading-relaxed">
+                    Un club donde el voleibol se convierte en disciplina,
+                    amistad, crecimiento y pasión por alcanzar nuevas metas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUIÉNES SOMOS
+    ====================================================== -->
+
+    <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 lg:py-28">
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <!-- Texto -->
+
+            <div>
+
+                <span class="text-secondary uppercase tracking-[0.25em] text-xs font-bold">
+                    Nuestra identidad
+                </span>
+
+                <h2 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-display font-black text-on-surface uppercase leading-tight">
+                    Más que un
+                    <span class="text-secondary">equipo.</span>
+                </h2>
+
+                <div class="w-16 h-1 bg-secondary mt-6 mb-8"></div>
+
+                <p class="text-lg text-on-surface leading-relaxed">
+                    Somos una asociación deportiva sin ánimo de lucro dedicada
+                    a promover el voleibol piso y playa, el trabajo en equipo,
+                    la disciplina y la pasión por el deporte.
+                </p>
+
+                <p class="mt-5 text-base text-on-surface-variant leading-relaxed">
+                    En Club Rabbit creemos que el deporte transforma vidas.
+                    Por eso buscamos brindar un espacio de formación integral
+                    donde nuestros atletas puedan desarrollar sus habilidades,
+                    fortalecer su carácter y construir relaciones dentro y
+                    fuera de la cancha.
+                </p>
+
+                <!-- Estadística -->
+
+                <div class="mt-10 flex items-center gap-5">
+
+                    <div class="text-5xl font-display font-black text-secondary">
+                        40+
+                    </div>
+
+                    <div class="h-12 w-px bg-outline-variant/40"></div>
+
+                    <div>
+                        <p class="text-on-surface font-bold uppercase tracking-wider text-sm">
+                            Atletas
+                        </p>
+
+                        <p class="text-on-surface-variant text-sm">
+                            Formando parte de la familia Rabbit
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Imagen -->
+
+            <div class="relative">
+
+                <div class="absolute -top-4 -left-4 w-full h-full border border-secondary/30"></div>
+
+                <div class="relative h-[420px] lg:h-[520px] overflow-hidden">
+
+                    <img
+                        src="/static/images/equipo.jpeg"
+                        alt="Equipo Rabbit Volley Club"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+
+                    <div class="absolute bottom-0 left-0 p-7">
+
+                        <span class="text-secondary uppercase tracking-[0.2em] text-xs font-bold">
+                            Familia Rabbit
+                        </span>
+
+                        <h3 class="mt-2 text-3xl md:text-4xl font-display font-black text-white uppercase">
+                            Un solo equipo.
+                            <br>
+                            Una sola meta.
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VALORES
+    ====================================================== -->
+
+    <section class="bg-surface-container border-y border-outline-variant/10">
+
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20">
+
+            <div class="text-center max-w-2xl mx-auto mb-14">
+
+                <span class="text-secondary uppercase tracking-[0.25em] text-xs font-bold">
+                    Lo que nos representa
+                </span>
+
+                <h2 class="mt-4 text-4xl md:text-5xl font-display font-black text-on-surface uppercase">
+                    Nuestra <span class="text-secondary">forma de jugar</span>
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-3 gap-px bg-outline-variant/20">
+
+                <!-- Disciplina -->
+
+                <div class="bg-surface-container p-8 lg:p-10">
+
+                    <span class="material-symbols-outlined text-secondary text-4xl">
+                        fitness_center
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-display font-black text-on-surface uppercase">
+                        Disciplina
+                    </h3>
+
+                    <p class="mt-4 text-on-surface-variant leading-relaxed">
+                        El compromiso con cada entrenamiento nos permite
+                        mejorar, aprender y avanzar como deportistas.
+                    </p>
+
+                </div>
+
+
+                <!-- Equipo -->
+
+                <div class="bg-surface-container p-8 lg:p-10">
+
+                    <span class="material-symbols-outlined text-secondary text-4xl">
+                        groups
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-display font-black text-on-surface uppercase">
+                        Equipo
+                    </h3>
+
+                    <p class="mt-4 text-on-surface-variant leading-relaxed">
+                        Cada punto se construye juntos. Valoramos la
+                        confianza, el respeto y el apoyo entre compañeros.
+                    </p>
+
+                </div>
+
+
+                <!-- Pasión -->
+
+                <div class="bg-surface-container p-8 lg:p-10">
+
+                    <span class="material-symbols-outlined text-secondary text-4xl">
+                        bolt
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-display font-black text-on-surface uppercase">
+                        Pasión
+                    </h3>
+
+                    <p class="mt-4 text-on-surface-variant leading-relaxed">
+                        Vivimos el voleibol con energía y pasión,
+                        dentro de la cancha y en cada nuevo desafío.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HISTORIA / EQUIPO
+    ====================================================== -->
+
+    <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+            <!-- Número -->
+
+            <div class="lg:col-span-2 hidden lg:block">
+
+                <span class="text-[120px] font-display font-black text-secondary/10 leading-none">
+                    01
+                </span>
+
+            </div>
+
+
+            <!-- Historia -->
+
+            <div class="lg:col-span-6">
+
+                <span class="text-secondary uppercase tracking-[0.25em] text-xs font-bold">
+                    Nuestra historia
+                </span>
+
+                <h2 class="mt-4 text-4xl md:text-5xl font-display font-black text-on-surface uppercase leading-tight">
+                    Crecer dentro
+                    <br>
+                    <span class="text-secondary">y fuera de la cancha.</span>
+                </h2>
+
+                <div class="w-16 h-1 bg-secondary mt-6 mb-8"></div>
+
+                <p class="text-on-surface-variant leading-relaxed">
+                    Club Rabbit nació bajo la premisa de que el deporte
+                    puede convertirse en una herramienta para formar
+                    personas, fortalecer vínculos y generar nuevas
+                    oportunidades.
+                </p>
+
+                <p class="mt-5 text-on-surface-variant leading-relaxed">
+                    Nuestro propósito va más allá del resultado de un
+                    partido. Cada entrenamiento representa una oportunidad
+                    para aprender, superar obstáculos y construir confianza.
+                </p>
+
+            </div>
+
+
+            <!-- Mini galería -->
+
+            <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+
+                <div class="h-48 overflow-hidden">
+                    <img
+                        src="/static/images/jugadora1.jpeg"
+                        alt="Jugadora Rabbit"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    >
+                </div>
+
+                <div class="h-48 overflow-hidden mt-8">
+                    <img
+                        src="/static/images/jugadora2.jpeg"
+                        alt="Jugadora Rabbit"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    >
+                </div>
+
+                <div class="col-span-2 h-56 overflow-hidden">
+                    <img
+                        src="/static/images/entrenadora.jpeg"
+                        alt="Entrenadora Rabbit"
+                        class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMACIÓN INSTITUCIONAL
+    ====================================================== -->
+
+    <section class="bg-surface-container">
+
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20">
+
+            <div class="mb-12">
+
+                <span class="text-secondary uppercase tracking-[0.25em] text-xs font-bold">
+                    Directorio
+                </span>
+
+                <h2 class="mt-3 text-4xl md:text-5xl font-display font-black text-on-surface uppercase">
+                    Información
+                    <span class="text-secondary">institucional</span>
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                <!-- Representante -->
+
+                <div class="border border-outline-variant/20 p-7">
+
+                    <span class="material-symbols-outlined text-secondary text-3xl">
+                        person
+                    </span>
+
+                    <p class="mt-6 text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                        Representante Legal
+                    </p>
+
+                    <p class="mt-3 text-lg font-bold text-on-surface">
+                        Augusto Cújar Bermúdez
+                    </p>
+
+                </div>
+
+
+                <!-- Teléfono -->
+
+                <div class="border border-outline-variant/20 p-7">
+
+                    <span class="material-symbols-outlined text-secondary text-3xl">
+                        call
+                    </span>
+
+                    <p class="mt-6 text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                        Teléfonos
+                    </p>
+
+                    <p class="mt-3 text-lg font-bold text-on-surface">
+                        313 2884 314
+                    </p>
+
+                    <p class="mt-1 text-lg font-bold text-on-surface">
+                        311 850 6354
+                    </p>
+
+                </div>
+
+
+                <!-- Correo -->
+
+                <div class="border border-outline-variant/20 p-7">
+
+                    <span class="material-symbols-outlined text-secondary text-3xl">
+                        mail
+                    </span>
+
+                    <p class="mt-6 text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                        Correo
+                    </p>
+
+                    <p class="mt-3 text-base font-bold text-on-surface break-all">
+                        rabbitclub30@gmail.com
+                    </p>
+
+                </div>
+
+
+                <!-- Práctica -->
+
+                <div class="border border-outline-variant/20 p-7">
+
+                    <span class="material-symbols-outlined text-secondary text-3xl">
+                        location_on
+                    </span>
+
+                    <p class="mt-6 text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                        Lugar de práctica
+                    </p>
+
+                    <p class="mt-3 text-lg font-bold text-secondary">
+                        Parque Iberia
+                    </p>
+
+                    <p class="mt-1 text-on-surface-variant">
+                        Suba, Bogotá
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         UBICACIÓN
+    ====================================================== -->
+
+    <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 lg:py-28">
+
+        <div class="grid lg:grid-cols-3 gap-10 items-center">
+
+            <div>
+
+                <span class="text-secondary uppercase tracking-[0.25em] text-xs font-bold">
+                    Encuéntranos
+                </span>
+
+                <h2 class="mt-4 text-4xl md:text-5xl font-display font-black text-on-surface uppercase leading-tight">
+                    Nuestra
+                    <span class="text-secondary">sede</span>
+                </h2>
+
+                <div class="w-16 h-1 bg-secondary mt-6 mb-8"></div>
+
+                <div class="space-y-6">
+
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                            Sede principal
+                        </p>
+
+                        <p class="mt-2 text-lg text-on-surface font-semibold">
+                            Calle 131 A No. 55 - 25
+                        </p>
+
+                        <p class="text-on-surface-variant">
+                            Prado Norte, Bogotá
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">
+                            Lugar de práctica
+                        </p>
+
+                        <p class="mt-2 text-lg text-secondary font-bold">
+                            Parque Iberia
+                        </p>
+
+                        <p class="text-on-surface-variant">
+                            Suba, Bogotá
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mapa -->
+
+            <div class="lg:col-span-2 h-[350px] md:h-[430px] overflow-hidden relative">
+
+                <div
+                    class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPq5k7cT5PrKTSbEm7blCx47KbTdXMp3wXniL2BQfqF84AmRCnjH0m5DGHPQ6VEoHJXSD2N32sxucezhWktCcBz4ILh2-uz_htIY_NGt1K8kv3zU7nfqBtEeXafz7UECfANhCBSuM4ILj7P2Zs9W3a6i0hc-IGTDp3outS5OGTVRqdcx0ruG1TNnS3AockewpU9ojNigtqwj_DOJ8Kr4G-V5RhseEv7YpvUzM-9yPA73yIeRUfGUcqvA');"
+                ></div>
+
+                <div class="absolute inset-0 bg-secondary/10"></div>
+
+                <div class="absolute bottom-5 left-5 right-5 bg-background/90 backdrop-blur-md p-5">
+
+                    <div class="flex items-center gap-3">
+
+                        <span class="material-symbols-outlined text-secondary">
+                            location_on
+                        </span>
+
+                        <div>
+                            <p class="text-sm font-bold text-on-surface">
+                                Parque Iberia
+                            </p>
+
+                            <p class="text-xs text-on-surface-variant">
+                                Suba · Bogotá
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA FINAL
+    ====================================================== -->
+
+    <section class="bg-secondary">
+
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 md:py-20">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+
+                <div>
+
+                    <p class="text-background/70 uppercase tracking-[0.25em] text-xs font-bold">
+                        Familia Rabbit
+                    </p>
+
+                    <h2 class="mt-3 text-4xl md:text-5xl font-display font-black text-background uppercase leading-tight">
+                        El próximo punto
+                        <br>
+                        empieza contigo.
+                    </h2>
+
+                </div>
+
+                <a
+                    href="/contacto"
+                    class="inline-flex items-center gap-3 bg-background text-on-surface px-7 py-4 font-bold uppercase tracking-wider text-sm hover:gap-5 transition-all"
+                >
+                    Quiero ser parte
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

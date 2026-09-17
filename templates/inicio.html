@@ -1,0 +1,766 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio | Rabbit Volley Club
+{% endblock %}
+
+
+{% block content %}
+
+<!-- =====================================================
+     HERO PRINCIPAL
+====================================================== -->
+
+<section
+    class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden"
+>
+
+    <!-- IMAGEN DE FONDO -->
+
+    <div class="absolute inset-0">
+
+        <div
+            class="absolute inset-0 bg-cover bg-center scale-105"
+            style="background-image: url('/static/images/hero.jpeg');"
+        ></div>
+
+        <!-- OSCURECER IMAGEN -->
+
+        <div
+            class="absolute inset-0 bg-black/65"
+        ></div>
+
+        <!-- DEGRADADO LATERAL -->
+
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20"
+        ></div>
+
+        <!-- DEGRADADO INFERIOR -->
+
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
+        ></div>
+
+    </div>
+
+
+    <!-- ELEMENTOS DECORATIVOS -->
+
+    <div
+        class="absolute right-[-100px] top-1/2 -translate-y-1/2 text-[260px] md:text-[400px] font-black text-secondary/5 select-none pointer-events-none"
+    >
+        R
+    </div>
+
+
+    <!-- CONTENIDO -->
+
+    <div
+        class="relative z-10 w-full max-w-[1280px] mx-auto px-6 lg:px-16 py-24"
+    >
+
+        <div class="max-w-4xl">
+
+
+            <!-- ETIQUETA -->
+
+            <div
+                class="flex items-center gap-3 mb-7"
+            >
+
+                <span
+                    class="w-12 h-[2px] bg-secondary"
+                ></span>
+
+                <span
+                    class="text-secondary font-bold uppercase tracking-[0.3em] text-xs"
+                >
+                    Club Deportivo Rabbit
+                </span>
+
+            </div>
+
+
+            <!-- TITULO -->
+
+            <h1
+                class="font-display-lg text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.92] tracking-tight text-white"
+            >
+
+                Vive el
+
+                <span class="text-secondary">
+                    voleibol.
+                </span>
+
+                <br>
+
+                Construye tu
+
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary"
+                >
+                    futuro.
+                </span>
+
+            </h1>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <p
+                class="mt-8 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed"
+            >
+                Entrenamos, competimos y crecemos juntos.
+                En Rabbit formamos deportistas con disciplina,
+                pasión y valores dentro y fuera de la cancha.
+            </p>
+
+
+            <!-- BOTONES -->
+
+            <div
+                class="flex flex-col sm:flex-row gap-4 mt-10"
+            >
+
+                <a
+                    href="/programas"
+                    class="group inline-flex items-center justify-center gap-3 bg-secondary text-black font-extrabold uppercase tracking-wider px-7 py-4 rounded-lg hover:bg-tertiary transition-all duration-300 hover:-translate-y-1"
+                >
+
+                    Conoce nuestras categorias
+
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                    >
+                        arrow_forward
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/contacto"
+                    class="inline-flex items-center justify-center gap-3 border border-white/30 text-white font-bold uppercase tracking-wider px-7 py-4 rounded-lg hover:border-secondary hover:text-secondary transition-all"
+                >
+
+                    Inscríbete
+
+                    <span class="material-symbols-outlined">
+                        sports_volleyball
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- UBICACIÓN -->
+
+            <div
+                class="flex flex-wrap items-center gap-x-8 gap-y-3 mt-12 text-sm"
+            >
+
+                <div class="flex items-center gap-2 text-white/70">
+
+                    <span class="material-symbols-outlined text-secondary">
+                        location_on
+                    </span>
+
+                    <span>
+                        Suba · Bogotá
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-2 text-white/70">
+
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+
+                    <span>
+                        Inscripciones abiertas
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEXTO LATERAL -->
+
+    <div
+        class="absolute right-6 lg:right-12 bottom-20 hidden lg:flex flex-col items-center gap-4"
+    >
+
+        <span
+            class="text-white/30 text-[10px] uppercase tracking-[0.4em] [writing-mode:vertical-rl]"
+        >
+            Pasión · Disciplina · Equipo
+        </span>
+
+        <div
+            class="w-px h-20 bg-gradient-to-b from-secondary to-transparent"
+        ></div>
+
+    </div>
+
+
+    <!-- INDICADOR SCROLL -->
+
+    <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/40"
+    >
+
+        <span class="text-[9px] uppercase tracking-[0.3em]">
+            Descubre Rabbit
+        </span>
+
+        <span class="material-symbols-outlined animate-bounce text-secondary">
+            keyboard_arrow_down
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     IDENTIDAD DEL CLUB
+====================================================== -->
+
+<section
+    class="relative bg-surface-container-lowest py-20 md:py-28"
+>
+
+    <div
+        class="max-w-[1280px] mx-auto px-6 lg:px-16"
+    >
+
+        <div
+            class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        >
+
+            <!-- TEXTO -->
+
+            <div>
+
+                <span
+                    class="text-secondary font-bold uppercase tracking-[0.25em] text-xs"
+                >
+                    Nuestra esencia
+                </span>
+
+                <h2
+                    class="mt-4 text-4xl md:text-5xl font-black uppercase leading-tight text-on-surface"
+                >
+                    Más que un
+
+                    <span class="text-secondary">
+                        deporte.
+                    </span>
+
+                    <br>
+
+                    Una familia.
+                </h2>
+
+                <p
+                    class="mt-6 text-on-surface-variant text-base md:text-lg leading-relaxed"
+                >
+                    Rabbit es un espacio donde el voleibol se convierte
+                    en una herramienta para aprender, competir,
+                    compartir y superar nuestros propios límites.
+                </p>
+
+                <p
+                    class="mt-4 text-on-surface-variant/70 leading-relaxed"
+                >
+                    Trabajamos el desarrollo técnico y deportivo de
+                    nuestros atletas sin dejar de lado valores como
+                    el respeto, la responsabilidad, la disciplina
+                    y el trabajo en equipo.
+                </p>
+
+
+                <a
+                    href="/nosotros"
+                    class="inline-flex items-center gap-2 mt-8 text-secondary font-bold uppercase tracking-wider hover:gap-4 transition-all"
+                >
+
+                    Conoce nuestra historia
+
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- BLOQUE VISUAL -->
+
+            <div class="relative">
+
+                <div
+                    class="aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden"
+                >
+
+                    <img
+                        src="/static/images/equipo2.jpeg"
+                        alt="Equipo Rabbit Volley Club"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    >
+
+                </div>
+
+
+                <!-- TARJETA -->
+
+                <div
+                    class="absolute -bottom-6 -left-4 md:-left-8 bg-surface-container border border-outline-variant/30 p-6 rounded-xl shadow-2xl"
+                >
+
+                    <div class="flex items-center gap-4">
+
+                        <div
+                            class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-black"
+                        >
+
+                            <span class="material-symbols-outlined">
+                                sports_volleyball
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-secondary font-black text-xl">
+                                RABBIT
+                            </p>
+
+                            <p class="text-xs text-on-surface-variant uppercase tracking-wider">
+                                Voleibol · Bogotá
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ¿QUÉ ENCONTRARÁS EN RABBIT?
+====================================================== -->
+
+<section
+    class="bg-background py-20 md:py-28"
+>
+
+    <div
+        class="max-w-[1280px] mx-auto px-6 lg:px-16"
+    >
+
+        <!-- ENCABEZADO -->
+
+        <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        >
+
+            <div>
+
+                <span
+                    class="text-secondary font-bold uppercase tracking-[0.25em] text-xs"
+                >
+                    Lo que hacemos
+                </span>
+
+                <h2
+                    class="mt-3 text-4xl md:text-5xl font-black uppercase text-on-surface"
+                >
+                    Entrena.
+
+                    <span class="text-secondary">
+                        Compite.
+                    </span>
+
+                    Crece.
+                </h2>
+
+            </div>
+
+            <p
+                class="max-w-md text-on-surface-variant leading-relaxed"
+            >
+                Diferentes espacios para desarrollar tus habilidades
+                y disfrutar el voleibol en todas sus etapas.
+            </p>
+
+        </div>
+
+
+        <!-- TARJETAS -->
+
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
+
+
+            <!-- FORMACIÓN -->
+
+            <a
+                href="/programas"
+                class="group relative min-h-[320px] rounded-xl overflow-hidden"
+            >
+
+                <img
+                    src="/static/images/formacion.jpeg"
+                    alt="Formación deportiva"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                >
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+                ></div>
+
+                <div
+                    class="absolute bottom-0 left-0 p-7"
+                >
+
+                    <span
+                        class="material-symbols-outlined text-secondary text-4xl mb-4"
+                    >
+                        school
+                    </span>
+
+                    <h3
+                        class="text-2xl font-black uppercase text-white"
+                    >
+                        Formación
+                    </h3>
+
+                    <p
+                        class="mt-2 text-white/65 text-sm leading-relaxed"
+                    >
+                        Desarrolla fundamentos, técnica y confianza
+                        dentro de la cancha.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- COMPETENCIA -->
+
+            <a
+                href="/eventos"
+                class="group relative min-h-[320px] rounded-xl overflow-hidden"
+            >
+
+                <img
+                    src="/static/images/competencia.jpeg"
+                    alt="Competencia de voleibol"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                >
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+                ></div>
+
+                <div
+                    class="absolute bottom-0 left-0 p-7"
+                >
+
+                    <span
+                        class="material-symbols-outlined text-secondary text-4xl mb-4"
+                    >
+                        emoji_events
+                    </span>
+
+                    <h3
+                        class="text-2xl font-black uppercase text-white"
+                    >
+                        Competencia
+                    </h3>
+
+                    <p
+                        class="mt-2 text-white/65 text-sm leading-relaxed"
+                    >
+                        Participa en torneos y vive la experiencia
+                        de representar a Rabbit.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- EQUIPO -->
+
+            <a
+                href="/galeria"
+                class="group relative min-h-[320px] rounded-xl overflow-hidden"
+            >
+
+                <img
+                    src="/static/images/equipo.jpeg"
+                    alt="Familia Rabbit"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                >
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+                ></div>
+
+                <div
+                    class="absolute bottom-0 left-0 p-7"
+                >
+
+                    <span
+                        class="material-symbols-outlined text-secondary text-4xl mb-4"
+                    >
+                        groups
+                    </span>
+
+                    <h3
+                        class="text-2xl font-black uppercase text-white"
+                    >
+                        Comunidad
+                    </h3>
+
+                    <p
+                        class="mt-2 text-white/65 text-sm leading-relaxed"
+                    >
+                        Forma parte de una familia que comparte
+                        la pasión por el voleibol.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NIVELES / CATEGORÍAS
+====================================================== -->
+
+<section
+    class="bg-surface-container-lowest py-20 md:py-24 border-y border-outline-variant/10"
+>
+
+    <div
+        class="max-w-[1280px] mx-auto px-6 lg:px-16"
+    >
+
+        <div class="text-center max-w-2xl mx-auto mb-12">
+
+            <span
+                class="text-secondary font-bold uppercase tracking-[0.25em] text-xs"
+            >
+                Para todos
+            </span>
+
+            <h2
+                class="mt-3 text-4xl md:text-5xl font-black uppercase text-on-surface"
+            >
+                Encuentra tu
+
+                <span class="text-secondary">
+                    nivel
+                </span>
+            </h2>
+
+            <p
+                class="mt-5 text-on-surface-variant leading-relaxed"
+            >
+                Espacios deportivos pensados para diferentes edades
+                y niveles de experiencia.
+            </p>
+
+        </div>
+
+
+        <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+
+            <div
+                class="bg-surface-container p-6 md:p-8 rounded-xl border border-outline-variant/10 hover:border-secondary/50 transition-all"
+            >
+
+                <span class="text-secondary text-sm font-black">
+                    01
+                </span>
+
+                <h3 class="mt-8 text-xl font-black uppercase">
+                    Iniciación
+                </h3>
+
+                <p class="mt-2 text-sm text-on-surface-variant">
+                    Primeros pasos en el voleibol.
+                </p>
+
+            </div>
+
+
+            <div
+                class="bg-surface-container p-6 md:p-8 rounded-xl border border-outline-variant/10 hover:border-secondary/50 transition-all"
+            >
+
+                <span class="text-secondary text-sm font-black">
+                    02
+                </span>
+
+                <h3 class="mt-8 text-xl font-black uppercase">
+                    Formativo
+                </h3>
+
+                <p class="mt-2 text-sm text-on-surface-variant">
+                    Desarrollo técnico y deportivo.
+                </p>
+
+            </div>
+
+
+            <div
+                class="bg-surface-container p-6 md:p-8 rounded-xl border border-outline-variant/10 hover:border-secondary/50 transition-all"
+            >
+
+                <span class="text-secondary text-sm font-black">
+                    03
+                </span>
+
+                <h3 class="mt-8 text-xl font-black uppercase">
+                    Competitivo
+                </h3>
+
+                <p class="mt-2 text-sm text-on-surface-variant">
+                    Preparación para competir.
+                </p>
+
+            </div>
+
+
+            <div
+                class="bg-secondary text-black p-6 md:p-8 rounded-xl"
+            >
+
+                <span class="text-black/60 text-sm font-black">
+                    04
+                </span>
+
+                <h3 class="mt-8 text-xl font-black uppercase">
+                    Playa
+                </h3>
+
+                <p class="mt-2 text-sm text-black/70">
+                    Vive el voleibol sobre arena.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LLAMADO A LA ACCIÓN
+====================================================== -->
+
+<section
+    class="relative overflow-hidden bg-secondary py-20 md:py-24"
+>
+
+    <div
+        class="absolute inset-0 opacity-10"
+    >
+
+        <div
+            class="absolute -right-20 -top-20 w-80 h-80 border-[40px] border-black rounded-full"
+        ></div>
+
+        <div
+            class="absolute -left-20 -bottom-32 w-96 h-96 border-[50px] border-black rounded-full"
+        ></div>
+
+    </div>
+
+
+    <div
+        class="relative max-w-[1280px] mx-auto px-6 lg:px-16"
+    >
+
+        <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-10"
+        >
+
+            <div>
+
+                <span
+                    class="text-black/60 font-black uppercase tracking-[0.25em] text-xs"
+                >
+                    ¿Listo para empezar?
+                </span>
+
+                <h2
+                    class="mt-3 text-4xl md:text-6xl font-black uppercase leading-tight text-black"
+                >
+                    Tu próximo punto
+                    <br>
+                    comienza aquí.
+                </h2>
+
+            </div>
+
+
+            <a
+                href="/contacto"
+                class="group inline-flex items-center justify-center gap-3 bg-black text-secondary font-black uppercase tracking-wider px-8 py-5 rounded-lg hover:bg-surface-container transition-all duration-300 whitespace-nowrap"
+            >
+
+                Quiero ser parte de Rabbit
+
+                <span
+                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                >
+                    arrow_forward
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
