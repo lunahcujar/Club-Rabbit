@@ -1,0 +1,609 @@
+{% extends "base.html" %}
+
+{% block title %}Galería | Rabbit Volley Club{% endblock %}
+
+{% block content %}
+
+<main class="bg-background min-h-screen">
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-24">
+
+        <!-- Decoración -->
+
+        <div class="absolute -right-10 top-10
+                    text-[220px] lg:text-[320px]
+                    font-display font-black
+                    text-secondary/5 leading-none
+                    select-none pointer-events-none">
+            06
+        </div>
+
+        <div class="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-10">
+
+            <div class="max-w-3xl">
+
+                <span class="text-secondary uppercase
+                             tracking-[0.3em] text-xs font-bold">
+                    Rabbit Volley Club
+                </span>
+
+                <h1 class="mt-4 text-5xl md:text-6xl lg:text-8xl
+                           font-display font-black
+                           text-on-surface uppercase
+                           tracking-tight leading-[0.9]">
+
+                    Nuestra
+                    <span class="text-secondary">galería</span>
+
+                </h1>
+
+                <p class="mt-7 max-w-2xl text-base md:text-lg
+                          text-on-surface-variant leading-relaxed">
+
+                    Momentos, partidos, entrenamientos y experiencias
+                    que hacen parte de la familia Rabbit.
+
+                </p>
+
+                <div class="mt-8 flex items-center gap-3">
+
+                    <span class="w-10 h-1 bg-secondary"></span>
+
+                    <span class="text-xs uppercase
+                                 tracking-widest
+                                 text-on-surface-variant font-bold">
+
+                        Momentos que nos representan
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FILTROS
+    ====================================================== -->
+
+    <section class="max-w-[1280px] mx-auto px-6 lg:px-10 pb-10">
+
+        <div class="flex flex-wrap gap-3">
+
+            <button
+                onclick="filtrarGaleria('todos')"
+                id="btn-todos"
+                class="filtro-galeria px-5 py-3
+                       bg-secondary text-background
+                       text-xs font-bold uppercase
+                       tracking-wider transition-all">
+
+                Todo
+
+            </button>
+
+            <button
+                onclick="filtrarGaleria('foto')"
+                id="btn-foto"
+                class="filtro-galeria px-5 py-3
+                       bg-surface-container
+                       text-on-surface-variant
+                       text-xs font-bold uppercase
+                       tracking-wider
+                       hover:bg-secondary
+                       hover:text-background
+                       transition-all">
+
+                Fotos
+
+            </button>
+
+            <button
+                onclick="filtrarGaleria('video')"
+                id="btn-video"
+                class="filtro-galeria px-5 py-3
+                       bg-surface-container
+                       text-on-surface-variant
+                       text-xs font-bold uppercase
+                       tracking-wider
+                       hover:bg-secondary
+                       hover:text-background
+                       transition-all">
+
+                Videos
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALERÍA
+    ====================================================== -->
+
+    <section class="max-w-[1280px] mx-auto px-6 lg:px-10 pb-24">
+
+        <div
+            id="galeria-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                   gap-4"
+        >
+
+
+            <!-- =================================================
+                 FOTO 1 - GRANDE
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       md:col-span-2 lg:row-span-2
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[420px] lg:h-[560px]"
+            >
+
+                <!-- REEMPLAZAR URL -->
+
+                <img
+                    src="AQUI_URL_FOTO_1"
+                    alt="Rabbit Volley Club"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <!-- Overlay -->
+
+                <div class="absolute inset-0
+                            bg-gradient-to-t
+                            from-black/80
+                            via-transparent
+                            to-transparent">
+                </div>
+
+                <div class="absolute bottom-0 left-0
+                            right-0 p-7">
+
+                    <span class="text-secondary
+                                 text-[10px]
+                                 uppercase
+                                 tracking-[0.25em]
+                                 font-bold">
+
+                        Rabbit Volley Club
+
+                    </span>
+
+                    <h2 class="mt-2 text-2xl md:text-3xl
+                               font-display font-black
+                               text-white uppercase">
+
+                        Pasión por el voleibol
+
+                    </h2>
+
+                </div>
+
+                <!-- Icono -->
+
+                <div class="absolute top-5 right-5
+                            w-11 h-11
+                            bg-background/80
+                            backdrop-blur-sm
+                            flex items-center justify-center">
+
+                    <span class="material-symbols-outlined
+                                 text-secondary">
+
+                        photo_camera
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 FOTO 2
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[270px]"
+            >
+
+                <img
+                    src="AQUI_URL_FOTO_2"
+                    alt="Entrenamiento Rabbit"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0
+                            bg-black/0
+                            group-hover:bg-black/40
+                            transition-all duration-500">
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-5
+                            translate-y-3
+                            group-hover:translate-y-0
+                            opacity-0
+                            group-hover:opacity-100
+                            transition-all duration-500">
+
+                    <p class="text-white text-sm font-bold uppercase">
+                        Entrenamiento
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 FOTO 3
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[270px]"
+            >
+
+                <img
+                    src="AQUI_URL_FOTO_3"
+                    alt="Equipo Rabbit"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0
+                            bg-black/0
+                            group-hover:bg-black/40
+                            transition-all duration-500">
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-5
+                            translate-y-3
+                            group-hover:translate-y-0
+                            opacity-0
+                            group-hover:opacity-100
+                            transition-all duration-500">
+
+                    <p class="text-white text-sm font-bold uppercase">
+                        Familia Rabbit
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 FOTO 4
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[300px]"
+            >
+
+                <img
+                    src="AQUI_URL_FOTO_4"
+                    alt="Jugadores Rabbit"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0
+                            bg-gradient-to-t
+                            from-black/70
+                            to-transparent">
+                </div>
+
+                <span class="absolute bottom-5 left-5
+                             text-white text-sm font-bold uppercase">
+                    Equipo
+                </span>
+
+            </article>
+
+
+            <!-- =================================================
+                 FOTO 5
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[300px]"
+            >
+
+                <img
+                    src="AQUI_URL_FOTO_5"
+                    alt="Voleibol Rabbit"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0
+                            bg-gradient-to-t
+                            from-black/70
+                            to-transparent">
+                </div>
+
+                <span class="absolute bottom-5 left-5
+                             text-white text-sm font-bold uppercase">
+                    Voleibol
+                </span>
+
+            </article>
+
+
+            <!-- =================================================
+                 FOTO 6
+            ================================================== -->
+
+            <article
+                class="item-galeria foto
+                       group relative overflow-hidden
+                       bg-surface-container
+                       h-[300px]"
+            >
+
+                <img
+                    src="AQUI_URL_FOTO_6"
+                    alt="Club Rabbit"
+                    class="w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0
+                            bg-gradient-to-t
+                            from-black/70
+                            to-transparent">
+                </div>
+
+                <span class="absolute bottom-5 left-5
+                             text-white text-sm font-bold uppercase">
+                    Rabbit
+                </span>
+
+            </article>
+
+
+            <!-- =================================================
+                 VIDEO 1
+            ================================================== -->
+
+            <article
+                class="item-galeria video
+                       md:col-span-2
+                       group relative overflow-hidden
+                       bg-black"
+            >
+
+                <video
+                    controls
+                    class="w-full h-[300px] md:h-[380px] object-cover"
+                >
+
+                    <source
+                        src="AQUI_URL_VIDEO_1"
+                        type="video/mp4"
+                    >
+
+                    Tu navegador no soporta videos HTML5.
+
+                </video>
+
+                <div class="absolute top-5 left-5
+                            pointer-events-none">
+
+                    <span class="inline-flex items-center gap-2
+                                 px-3 py-2
+                                 bg-background/80
+                                 backdrop-blur-sm
+                                 text-secondary
+                                 text-xs font-bold uppercase">
+
+                        <span class="material-symbols-outlined text-sm">
+                            play_circle
+                        </span>
+
+                        Video
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 VIDEO 2
+            ================================================== -->
+
+            <article
+                class="item-galeria video
+                       group relative overflow-hidden
+                       bg-black"
+            >
+
+                <video
+                    controls
+                    class="w-full h-[300px] object-cover"
+                >
+
+                    <source
+                        src="AQUI_URL_VIDEO_2"
+                        type="video/mp4"
+                    >
+
+                    Tu navegador no soporta videos HTML5.
+
+                </video>
+
+                <div class="absolute top-5 left-5
+                            pointer-events-none">
+
+                    <span class="inline-flex items-center gap-2
+                                 px-3 py-2
+                                 bg-background/80
+                                 backdrop-blur-sm
+                                 text-secondary
+                                 text-xs font-bold uppercase">
+
+                        <span class="material-symbols-outlined text-sm">
+                            play_circle
+                        </span>
+
+                        Video
+
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FRASE FINAL
+    ====================================================== -->
+
+    <section class="bg-secondary">
+
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-16">
+
+            <div class="text-center">
+
+                <span class="material-symbols-outlined
+                             text-background text-4xl">
+                    sports_volleyball
+                </span>
+
+                <h2 class="mt-4 text-3xl md:text-5xl
+                           font-display font-black
+                           text-background uppercase">
+
+                    Cada punto cuenta.
+
+                </h2>
+
+                <p class="mt-4 text-background/70
+                          max-w-xl mx-auto">
+
+                    Cada entrenamiento, cada partido y cada momento
+                    hacen parte de nuestra historia.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}
+
+
+{% block extra_js %}
+
+<script>
+
+function filtrarGaleria(tipo) {
+
+    const elementos = document.querySelectorAll(".item-galeria");
+
+    const botones = document.querySelectorAll(".filtro-galeria");
+
+    // Restaurar botones
+
+    botones.forEach(boton => {
+
+        boton.classList.remove(
+            "bg-secondary",
+            "text-background"
+        );
+
+        boton.classList.add(
+            "bg-surface-container",
+            "text-on-surface-variant"
+        );
+
+    });
+
+
+    // Activar botón seleccionado
+
+    const botonActivo =
+        document.getElementById("btn-" + tipo);
+
+    if (botonActivo) {
+
+        botonActivo.classList.remove(
+            "bg-surface-container",
+            "text-on-surface-variant"
+        );
+
+        botonActivo.classList.add(
+            "bg-secondary",
+            "text-background"
+        );
+
+    }
+
+
+    // Filtrar
+
+    elementos.forEach(elemento => {
+
+        if (
+            tipo === "todos" ||
+            elemento.classList.contains(tipo)
+        ) {
+
+            elemento.style.display = "";
+
+        } else {
+
+            elemento.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+{% endblock %}

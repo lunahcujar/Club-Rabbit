@@ -111,3 +111,13 @@ async def contacto(request: Request):
             "active_page": "contacto"
         }
     )
+
+@app.get("/galeria")
+async def galeria(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name="galeria.html",
+        context={
+            "active_page": "galeria"
+        }
+    )
